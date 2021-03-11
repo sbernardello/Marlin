@@ -506,9 +506,12 @@
     #define DEFAULT_Ki_LIST {   1.25,   1.25 }
     #define DEFAULT_Kd_LIST {  86.00,  86.00 }
   #else
-    #define DEFAULT_Kp  21.00
-    #define DEFAULT_Ki   1.25
-    #define DEFAULT_Kd  86.00
+    // #define DEFAULT_Kp  21.00
+    // #define DEFAULT_Ki   1.25
+    // #define DEFAULT_Kd  86.00
+    #define DEFAULT_Kp 25.67
+    #define DEFAULT_Ki 2.39
+    #define DEFAULT_Kd 68.87
   #endif
 #endif // PIDTEMP
 
@@ -547,10 +550,12 @@
 
   // ANET A8
   // original Bed + 0.3mm Heat conducting into 4mm borosilicate (PID-Autotune: M303 E-1 S60 C5):
-  #define DEFAULT_bedKp 295.00
-  #define DEFAULT_bedKi 35.65
-  #define DEFAULT_bedKd 610.21
-
+  //#define DEFAULT_bedKp 295.00
+  //#define DEFAULT_bedKi 35.65
+  //#define DEFAULT_bedKd 610.21
+  #define DEFAULT_bedKp 48.04
+  #define DEFAULT_bedKi 9.16
+  #define DEFAULT_bedKd 167.92
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #endif // PIDTEMPBED
 
@@ -1177,16 +1182,16 @@
 // @section machine
 
 // The size of the print bed
-#define X_BED_SIZE 220
-#define Y_BED_SIZE 220
+#define X_BED_SIZE 215
+#define Y_BED_SIZE 210
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
-#define X_MIN_POS -33
+#define X_MIN_POS -18
 #define Y_MIN_POS -10
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
 #define Y_MAX_POS Y_BED_SIZE
-#define Z_MAX_POS 240
+#define Z_MAX_POS 190
 
 /**
  * Software Endstops
